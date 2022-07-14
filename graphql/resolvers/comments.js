@@ -14,18 +14,22 @@ module.exports = {
         })
       }
       else {
-        const post = await Post.findById(postId);
-        if (post) {
-          //unshift brings the newest comment to the top
-          post.comments.unshift({
-            body,
-            username: user.username,
-            createdAt: new Date().toISOString()
-          })
-          await post.save();
-          return post;
-        } else {
-          throw new UserInputError('Post not found');
+        try {
+          const post = await Post.findById(postId);
+          if (post) {
+            //unshift brings the newest comment to the top
+            post.comments.unshift({
+              body,
+              username: user.username,
+              createdAt: new Date().toISOString()
+            })
+            await post.save();
+            return post;
+          } else {
+            throw new UserInputError('Post not found');
+          }
+        } catch (err) {
+          throw new Error(err);
         }
       }
     },
