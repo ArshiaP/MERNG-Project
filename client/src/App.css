@@ -1,7 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/semantic-ui@2/dist/semantic.min.css");
 
 body {
-  background-color: #191919;
+  background-color: #002C37;
   color: white;
 }
 
@@ -15,4 +15,11 @@ body {
 
 .ui.secondary.pointing.menu a.item:hover {
   color: rgb(170, 170, 170);
+}
+
+.page-title{
+  display: block !important;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 10px;
 }
