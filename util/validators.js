@@ -4,10 +4,10 @@ module.exports.validateRegisterInput = (username, password, confirmPassword, ema
   const errors = {};
 
   // The trim() method removes whitespace from both ends of a string and returns a new string, without modifying the original string.
-  if (username.trim === '') {
+  if (username === '') {
     errors.username = 'Username cannot be empty';
   }
-  if (email.trim === '') {
+  if (email === '') {
     errors.email = 'Email cannot be empty';
   }
   else if (!validator.isEmail(email)) {
@@ -19,7 +19,7 @@ module.exports.validateRegisterInput = (username, password, confirmPassword, ema
   //     errors.email = 'Email must be a valid email address';
   //   }
   // }
-  if (password.trim === '') {
+  if (password === '') {
     errors.password = 'Password cannot be empty';
   } else if (password !== confirmPassword) {
     errors.password = 'Passwords do not match';
@@ -33,10 +33,10 @@ module.exports.validateRegisterInput = (username, password, confirmPassword, ema
 
 module.exports.validateLoginInput = (username,password) => {
   const errors = {};
-  if (username.trim === '') {
+  if (username === '') {
     errors.username = 'Username cannot be empty';
   }
-  if (password.trim === '') {
+  if (password === '') {
     errors.password = 'Password cannot be empty';
   } 
   return {

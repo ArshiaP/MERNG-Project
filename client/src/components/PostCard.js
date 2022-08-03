@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Card, Icon, Label, Image } from 'semantic-ui-react'
 import moment from 'moment'
 import { Link } from 'react-router-dom'
+
 function PostCard({ post: { body, createdAt, id, username, likes, comments } }) {
   const likeNumber = likes.length;
   const commentNumber = comments.length;

@@ -1,7 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/semantic-ui@2/dist/semantic.min.css");
 
-body {
-  background-color: #002C37;
+body, Form {
+  background-color: #0A192F;
   color: white;
 }
 
@@ -16,10 +16,27 @@ body {
 .ui.secondary.pointing.menu a.item:hover {
   color: rgb(170, 170, 170);
 }
-
+.ui.form .field>label{
+  color: white;
+}
 .page-title{
   display: block !important;
   text-align: center;
   font-size: 2rem;
   margin-top: 10px;
 }
+
+.form-container{
+  width: 400px;
+  margin: auto;
+}
+
+.ui.error.message, .ui.form .field.error .input, .ui.form .field.error label, .ui.form .fields.error .field .input, .ui.form .fields.error .field label, .ui.form .field.error label{
+  color: #AB4A43;
+}
+
+.ui.form .field.error input[type=password]::placeholder,.ui.form .field.error input[type=password],.ui.form .field.error input[type=email],.ui.form .field.error input[type=email]::placeholder,.ui.form .field.error input[type=text],.ui.form .field.error input[type=text]::placeholder{
+  color: #AB4A43;
+  border-color: #AB4A43;
+}
+
