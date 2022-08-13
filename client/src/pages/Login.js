@@ -36,9 +36,11 @@ function Login(props) {
     },
     variables: values
   })
+
   function loginUserCallback() {
     loginUser();
   };
+  
   if (!localStorage.getItem("token")) {
     return (
       <div className='form-container'>
