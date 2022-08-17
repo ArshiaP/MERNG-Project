@@ -5,16 +5,13 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from '../context/auth'
 import LikeButton from './LikeButton';
+import DeleteButton from './DeleteButton';
 
 function PostCard({ post: { body, createdAt, id, username, likes, comments } }) {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const commentNumber = comments.length;
-
-  function deletePost() {
-    console.log('Delete Post');
-  }
 
   function commentPost() {
     navigate(`/posts/${id}`);
@@ -44,11 +41,7 @@ function PostCard({ post: { body, createdAt, id, username, likes, comments } }) 
             {commentNumber}
           </Label>
         </Button>
-        {user && user.username === username && (
-          <Button as="div" color="red" onClick={deletePost} floated="right">
-            <Icon name='trash' style={{margin:0}}/>
-          </Button>
-        )}
+        {user && user.username === username && <DeleteButton postId={id}/>}
       </Card.Content>
     </Card>
   )
