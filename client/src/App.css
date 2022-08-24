@@ -1,7 +1,8 @@
 @import url("https://cdn.jsdelivr.net/npm/semantic-ui@2/dist/semantic.min.css");
 
-body, Form {
-  background-color: #0A192F;
+body,
+Form {
+  background-color: #0a192f;
   color: white;
 }
 
@@ -16,30 +17,78 @@ body, Form {
 .ui.secondary.pointing.menu a.item:hover {
   color: rgb(170, 170, 170);
 }
-.ui.form .field>label{
+.ui.form .field > label {
   color: white;
 }
-.page-title{
+.page-title {
   display: block !important;
   text-align: center;
   font-size: 2rem;
   margin-top: 10px;
 }
 
-.form-container{
+.form-container {
   width: 400px;
   margin: auto;
 }
 
-.ui.modal>.content{
+.ui.modal > .content {
   color: black;
 }
 
-.ui.error.message, .ui.form .field.error .input, .ui.form .field.error label, .ui.form .fields.error .field .input, .ui.form .fields.error .field label, .ui.form .field.error label{
-  color: #AB4A43;
+.ui.error.message,
+.ui.form .field.error .input,
+.ui.form .field.error label,
+.ui.form .fields.error .field .input,
+.ui.form .fields.error .field label,
+.ui.form .field.error label {
+  color: #ab4a43;
 }
 
-.ui.form .field.error input[type=password]::placeholder,.ui.form .field.error input[type=password],.ui.form .field.error input[type=email],.ui.form .field.error input[type=email]::placeholder,.ui.form .field.error input[type=text],.ui.form .field.error input[type=text]::placeholder{
-  color: #AB4A43;
-  border-color: #AB4A43;
+.ui.form .field.error input[type="password"]::placeholder,
+.ui.form .field.error input[type="password"],
+.ui.form .field.error input[type="email"],
+.ui.form .field.error input[type="email"]::placeholder,
+.ui.form .field.error input[type="text"],
+.ui.form .field.error input[type="text"]::placeholder {
+  color: #ab4a43;
+  border-color: #ab4a43;
+}
+
+p {
+  color: black;
+}
+
+.ui.action.input.fluid {
+  background-color: white;
+}
+
+.loading{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+@media only screen and (max-width: 767px) {
+  .ui.grid > .stackable.stackable.row > .column,
+  .ui.stackable.grid > .column.grid > .column,
+  .ui.stackable.grid > .column.row > .column,
+  .ui.stackable.grid > .column:not(.row),
+  .ui.stackable.grid > .row > .column,
+  .ui.stackable.grid > .row > .wide.column,
+  .ui.stackable.grid > .wide.column {
+    max-width: 95%;
+    margin: auto !important;
+  }
+
+  h1 {
+    margin-top: 10px !important;
+  }
+
+  .ui.column.grid>[class*="ten wide"].column, .ui.grid>.column.row>[class*="ten wide"].column, .ui.grid>.row>[class*="ten wide"].column, .ui.grid>[class*="ten wide"].column {
+    width: 80%!important;
+}
 }

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Button, Icon, Label } from 'semantic-ui-react'
+import { Button, Icon, Label, Popup } from 'semantic-ui-react'
 import { AuthContext } from '../context/auth'
 import { useMutation } from '@apollo/client/react/hooks'
 import { Link } from 'react-router-dom'
@@ -41,12 +41,13 @@ function LikeButton({ props: { id, likes } }) {
 
   return (
     <>
-      <Button as='div' labelPosition='right' onClick={likePost}>
+    <Popup content={liked?"Unlike Post" : "Like Post"} inverted trigger={<Button as='div' labelPosition='right' onClick={likePost}>
         {likedButton}
         <Label basic color='teal' pointing='left'>
           {likeNumber}
         </Label>
-      </Button>
+      </Button>}/>
+      
     </>
   )
 }
