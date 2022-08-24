@@ -24,9 +24,7 @@ function Home() {
           </Grid.Column>
         )}
         {loading ? (
-          <div className='loading'>
            <Loader active inline='centered' />
-           </div>
         ) : (
           <Transition.Group>
             {posts && posts.map(post => (
