@@ -7,7 +7,7 @@ const resolvers = require('./graphql/resolvers')
 
 const { MONGODB } = require('./config.js');
 
-const PORT = process.env.port || 4000;
+const PORT = process.env.PORT || 4000;
 
 // In GraphQL, a context is an object shared by all the resolvers of a specific execution. It's useful for keeping data such as authentication info, the current user, database connection, data sources and other things you need for running your business logic.
 
